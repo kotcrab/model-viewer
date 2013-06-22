@@ -522,7 +522,7 @@ public class ModelViewer
 		@Override
 		public void dispose()
 		{
-			//this create exception "No OpenGL context found in the current thread." don't now why and how to fix it
+			//this create exception "No OpenGL context found in the current thread." don't now why and how to fix it.
 //			x.dispose();
 //			y.dispose();
 //			z.dispose();
