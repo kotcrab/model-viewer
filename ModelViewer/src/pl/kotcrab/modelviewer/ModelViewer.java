@@ -47,16 +47,16 @@ import com.badlogic.gdx.graphics.PerspectiveCamera;
 import com.badlogic.gdx.graphics.VertexAttributes.Usage;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g3d.Environment;
+import com.badlogic.gdx.graphics.g3d.Material;
 import com.badlogic.gdx.graphics.g3d.Model;
 import com.badlogic.gdx.graphics.g3d.ModelBatch;
 import com.badlogic.gdx.graphics.g3d.ModelInstance;
-import com.badlogic.gdx.graphics.g3d.lights.DirectionalLight;
-import com.badlogic.gdx.graphics.g3d.lights.Lights;
-import com.badlogic.gdx.graphics.g3d.materials.ColorAttribute;
-import com.badlogic.gdx.graphics.g3d.materials.Material;
+import com.badlogic.gdx.graphics.g3d.attributes.ColorAttribute;
+import com.badlogic.gdx.graphics.g3d.environment.DirectionalLight;
+import com.badlogic.gdx.graphics.g3d.utils.AnimationController;
 import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
 import com.badlogic.gdx.graphics.g3d.utils.ModelBuilder;
-import com.badlogic.gdx.graphics.g3d.utils.AnimationController;
 import com.badlogic.gdx.math.Matrix4;
 
 public class ModelViewer
@@ -299,7 +299,7 @@ public class ModelViewer
 		private Model y;
 		private Model z;
 		
-		private Lights lights;
+		private Environment lights;
 
 		//animation
 		private AnimationController animContrl;
@@ -310,8 +310,8 @@ public class ModelViewer
 		{
 			modelBatch = new ModelBatch();
 			
-			lights = new Lights();
-			lights.ambientLight.set(0.4f, 0.4f, 0.4f, 1f);
+			lights = new Environment();
+			lights.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1f));
 			lights.add(new DirectionalLight().set(0.8f, 0.8f, 0.8f, -10f, -8f, -2f));
 			
 			cam = new PerspectiveCamera(67, 400, 300);
