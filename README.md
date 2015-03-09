@@ -1,6 +1,8 @@
 model-viewer
 ============
 
+Probably outdated; see instead: https://github.com/ASneakyFox/libgdx-fbxconv-gui
+
 Libgdx 3D model viewer
 
 ###What it can do?
