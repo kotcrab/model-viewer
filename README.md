@@ -1,15 +1,15 @@
 model-viewer
 ============
 
-Probably outdated; see instead: https://github.com/ASneakyFox/libgdx-fbxconv-gui
+Outdated; see instead: https://github.com/ASneakyFox/libgdx-fbxconv-gui
 
 Libgdx 3D model viewer
 
-###What it can do?
--Open obj or g3db models  
--Scale model  
--Render with or without lights  
--Play animations
+#### What it can do?
+- Open obj or g3db models  
+- Scale model  
+- Render with or without lights  
+- Play animations
 
 [Video](http://youtu.be/bJMVjLuZ-fM)
 
